@@ -55,28 +55,32 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="八千里路云和月">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="获取Hexo首先需要安装Node.js，在macOS可以使用brew进行安装 1$ brew install node  然后安装Git 1$ brew install git  最后安装Hexo 1$ npm install -g hexo-cli  创建本地项目并配置NexT主题假设你的Github账号为user，则用Hexo创建一个名为user.github.io的本地项目 123$ hex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="配置基于Hexo的Github Pages">
+<meta property="og:url" content="http://yoursite.com/2019/08/17/配置基于Hexo的Github Pages/index.html">
 <meta property="og:site_name" content="八千里路云和月">
+<meta property="og:description" content="获取Hexo首先需要安装Node.js，在macOS可以使用brew进行安装 1$ brew install node  然后安装Git 1$ brew install git  最后安装Hexo 1$ npm install -g hexo-cli  创建本地项目并配置NexT主题假设你的Github账号为user，则用Hexo创建一个名为user.github.io的本地项目 123$ hex">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-17T07:36:49.331Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="八千里路云和月">
-  <link rel="canonical" href="http://yoursite.com/">
+<meta name="twitter:title" content="配置基于Hexo的Github Pages">
+<meta name="twitter:description" content="获取Hexo首先需要安装Node.js，在macOS可以使用brew进行安装 1$ brew install node  然后安装Git 1$ brew install git  最后安装Hexo 1$ npm install -g hexo-cli  创建本地项目并配置NexT主题假设你的Github账号为user，则用Hexo创建一个名为user.github.io的本地项目 123$ hex">
+  <link rel="canonical" href="http://yoursite.com/2019/08/17/配置基于Hexo的Github Pages/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>八千里路云和月</title>
+  <title>配置基于Hexo的Github Pages | 八千里路云和月</title>
   
 
 
@@ -180,100 +184,11 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content page-home">
-            
-  <section id="posts" class="posts-expand">
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/17/命令行刷LeetCode/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zml24">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="八千里路云和月">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/17/命令行刷LeetCode/" class="post-title-link" itemprop="url">命令行刷LeetCode</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-17 15:26:34 / 修改时间：15:39:33" itemprop="dateCreated datePublished" datetime="2019-08-17T15:26:34+08:00">2019-08-17</time>
-            </span>
-          
+          <div id="content" class="content page-post-detail">
             
 
-            
-          
-
-          
-
-        </div>
-      </header>
-
+  <div id="posts" class="posts-expand">
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="获取leetcode-cli"><a href="#获取leetcode-cli" class="headerlink" title="获取leetcode-cli"></a>获取leetcode-cli</h2><p>首先需要安装<code>Node.js</code>，在macOS可以使用<code>brew</code>进行安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install node</span><br></pre></td></tr></table></figure>
-
-<p>然后安装<code>leetcode-cli</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install -g leetcode-cli</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置自动化提交脚本"><a href="#配置自动化提交脚本" class="headerlink" title="配置自动化提交脚本"></a>配置自动化提交脚本</h2><p>假设你的刷题目录为<code>~/leetcode/dir</code>，你的提交目录为<code>~/git/dir</code>，则每次只刷一道题，利用tab键自动补全可以方便的每次只刷一道题并自动化提交到Github<br>首先创建一个<code>sub.sh</code>文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> touch sub.sh</span><br></pre></td></tr></table></figure>
-
-<p>然后修改该文件（我用的是zsh）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> !/bin/zsh</span><br><span class="line">mv $1 ~/git/dir</span><br><span class="line">cd ~/git/dir</span><br><span class="line">git add $1</span><br><span class="line">cd -</span><br></pre></td></tr></table></figure>
-
-<p>这样就可以方便的一键提交了</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ./sub.sh 1.two-sum.cpp</span><br></pre></td></tr></table></figure>
-
-<h2 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h2><p><a href="https://skygragon.github.io/leetcode-cli/commands" target="_blank" rel="noopener">leetcode-cli</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
 
   <article class="post" itemscope itemtype="http://schema.org/Article">
   
@@ -292,9 +207,8 @@
       <meta itemprop="name" content="八千里路云和月">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/17/配置基于Hexo的Github Pages/" class="post-title-link" itemprop="url">配置基于Hexo的Github Pages</a>
+        <h1 class="post-title" itemprop="name headline">配置基于Hexo的Github Pages
+
           
         </h1>
 
@@ -328,7 +242,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="获取Hexo"><a href="#获取Hexo" class="headerlink" title="获取Hexo"></a>获取Hexo</h2><p>首先需要安装<code>Node.js</code>，在macOS可以使用<code>brew</code>进行安装</p>
+        <h2 id="获取Hexo"><a href="#获取Hexo" class="headerlink" title="获取Hexo"></a>获取Hexo</h2><p>首先需要安装<code>Node.js</code>，在macOS可以使用<code>brew</code>进行安装</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install node</span><br></pre></td></tr></table></figure>
 
 <p>然后安装<code>Git</code></p>
@@ -354,27 +268,43 @@
 
 <h2 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h2><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a><br><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT主题</a></p>
 
-        
-      
     </div>
 
     
     
     
+        
+      
+
       <footer class="post-footer">
-          <div class="post-eof"></div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/08/17/命令行刷LeetCode/" rel="prev" title="命令行刷LeetCode">
+                  命令行刷LeetCode <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
         
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -393,8 +323,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -418,6 +357,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取Hexo"><span class="nav-number">1.</span> <span class="nav-text">获取Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建本地项目并配置NexT主题"><span class="nav-number">2.</span> <span class="nav-text">创建本地项目并配置NexT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到GitHub-Pages"><span class="nav-number">3.</span> <span class="nav-text">部署到GitHub Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关文档"><span class="nav-number">4.</span> <span class="nav-text">相关文档</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -511,5 +467,8 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.3.0"></script><script src="/js/post-details.js?v=7.3.0"></script>
+
+
 </body>
 </html>
