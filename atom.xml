@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-17T07:39:33.080Z</updated>
+  <updated>2019-10-17T11:17:39.299Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>L1-SVM和L2-SVM</title>
+    <link href="http://yoursite.com/2019/10/17/L1-SVM%E5%92%8CL2-SVM/"/>
+    <id>http://yoursite.com/2019/10/17/L1-SVM和L2-SVM/</id>
+    <published>2019-10-17T08:46:31.000Z</published>
+    <updated>2019-10-17T11:17:39.299Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="L1-SVM"><a href="#L1-SVM" class="headerlink" title="L1-SVM"></a>L1-SVM</h2><p>L1-SVM的形式为<br>$$<br>\begin{aligned}<br>    \min_{\bm{w}, \bm{\xi}} \quad &amp;\frac{1}{2} | \bm{w} |^2 + C \sum_{i=1}^n \xi_i \<br>    \text{s.t.} \quad             &amp;y_i (\bm{w}^T \bm{x}<em>i + b) \geq 1 - \xi_i, i = 1, \cdots, n \<br>                                  &amp;\xi_i \geq 0, i = 1, \cdots, n<br>\end{aligned}<br>$$<br>是一个正则项为一次的SVM，由KKT条件可得其对偶形式为<br>$$<br>\begin{aligned}<br>    \min</em>{\bm{\alpha}} \quad &amp;\frac{1}{2} \sum_{i, j=1}^n \alpha_i \alpha_j y_i y_j \bm{x}<em>i^T \bm{x}_j - \sum</em>{i=1}^n \alpha_i\<br>    \text{s.t.} \quad        &amp;\sum_{i=1}^n \alpha_i y_i = 0, i = 1, \cdots, n \<br>                             &amp;0 \leq \alpha_i \leq C, i = 1, \cdots, n<br>\end{aligned}<br>$$</p><h2 id="L2-SVM"><a href="#L2-SVM" class="headerlink" title="L2-SVM"></a>L2-SVM</h2><p>L2-SVM的形式为<br>$$<br>\begin{aligned}<br>    \min_{\bm{w}, \bm{\xi}} \quad &amp;\frac{1}{2} | \bm{w} |^2 + \frac{C}{2} \sum_{i=1}^n \xi_i^2 \<br>    \text{s.t.} \quad             &amp;y_i (\bm{w}^T x_i + b) \geq 1 - \xi_i, i = 1, \cdots, n<br>\end{aligned}<br>$$<br>是一个正则项为二次的SVM，由KKT条件可得其对偶形式为<br>$$<br>\begin{aligned}<br>    \min_{\bm{\alpha}} \quad &amp;\frac{1}{2} \sum_{i, j=1}^n \alpha_i \alpha_j y_i y_j (\bm{x}<em>i^T \bm{x}_j + \delta</em>{ij}) - \sum_{i=1}^n \alpha_i\<br>    \text{s.t.} \quad        &amp;\sum_{i=1}^n \alpha_i y_i = 0, i = 1, \cdots, n \<br>                             &amp;\alpha_i \geq 0, i = 1, \cdots, n<br>\end{aligned}<br>$$</p><p>其中$\delta_{ij}$是Kronecker delta函数。注意到L2-SVM对$\xi$不能添加约束，否则无法写出合适的对偶模型</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;L1-SVM&quot;&gt;&lt;a href=&quot;#L1-SVM&quot; class=&quot;headerlink&quot; title=&quot;L1-SVM&quot;&gt;&lt;/a&gt;L1-SVM&lt;/h2&gt;&lt;p&gt;L1-SVM的形式为&lt;br&gt;$$&lt;br&gt;\begin{aligned}&lt;br&gt;    \min_{\bm{w
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>快速配置ShadowSocks</title>
+    <link href="http://yoursite.com/2019/10/17/%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AEShadowSocks/"/>
+    <id>http://yoursite.com/2019/10/17/快速配置ShadowSocks/</id>
+    <published>2019-10-17T08:46:31.000Z</published>
+    <updated>2019-10-17T11:17:54.166Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装谷歌BBR"><a href="#安装谷歌BBR" class="headerlink" title="安装谷歌BBR"></a>安装谷歌BBR</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure><h2 id="安装ShadowSocks"><a href="#安装ShadowSocks" class="headerlink" title="安装ShadowSocks"></a>安装ShadowSocks</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget — no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line"></span><br><span class="line">chmod +x shadowsocks.sh</span><br><span class="line"></span><br><span class="line">./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;安装谷歌BBR&quot;&gt;&lt;a href=&quot;#安装谷歌BBR&quot; class=&quot;headerlink&quot; title=&quot;安装谷歌BBR&quot;&gt;&lt;/a&gt;安装谷歌BBR&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>命令行刷LeetCode</title>
@@ -44,7 +86,7 @@
     <published>2019-08-17T06:54:59.000Z</published>
     <updated>2019-08-17T08:12:08.651Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="获取Hexo"><a href="#获取Hexo" class="headerlink" title="获取Hexo"></a>获取Hexo</h2><p>首先需要安装<code>Node.js</code>，在macOS可以使用<code>brew</code>进行安装</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install node</span><br></pre></td></tr></table></figure><p>然后安装<code>Git</code></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install git</span><br></pre></td></tr></table></figure><p>最后安装Hexo</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install -g hexo-cli</span><br></pre></td></tr></table></figure><h2 id="创建本地项目并配置NexT主题"><a href="#创建本地项目并配置NexT主题" class="headerlink" title="创建本地项目并配置NexT主题"></a>创建本地项目并配置NexT主题</h2><p>假设你的Github账号为<code>user</code>，则用Hexo创建一个名为<code>user.github.io</code>的本地项目</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo init user.github.io</span><br><span class="line"><span class="meta">$</span> cd user.github.io</span><br><span class="line"><span class="meta">$</span> git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure><p>然后修改<code>_config.yml</code>文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure><h2 id="部署到GitHub-Pages"><a href="#部署到GitHub-Pages" class="headerlink" title="部署到GitHub Pages"></a>部署到GitHub Pages</h2><p>首先修改<code>_config.yml</code>文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:user/user.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>然后安装相关插件</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>最后进行部署</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo clean &amp;&amp; hexo g -d</span><br></pre></td></tr></table></figure><h2 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h2><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a> <a href="https://theme-next.iissnan.com" target="_blank" rel="noopener">NexT</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="获取Hexo"><a href="#获取Hexo" class="headerlink" title="获取Hexo"></a>获取Hexo</h2><p>首先需要安装<code>Node.js</code>，在macOS可以使用<code>brew</code>进行安装</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> brew install node</span></span><br></pre></td></tr></table></figure><p>然后安装<code>Git</code></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> brew install git</span></span><br></pre></td></tr></table></figure><p>最后安装Hexo</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install -g hexo-cli</span></span><br></pre></td></tr></table></figure><h2 id="创建本地项目并配置NexT主题"><a href="#创建本地项目并配置NexT主题" class="headerlink" title="创建本地项目并配置NexT主题"></a>创建本地项目并配置NexT主题</h2><p>假设你的Github账号为<code>user</code>，则用Hexo创建一个名为<code>user.github.io</code>的本地项目</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo init user.github.io</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> user.github.io</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span></span><br></pre></td></tr></table></figure><p>然后修改<code>_config.yml</code>文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure><h2 id="部署到GitHub-Pages"><a href="#部署到GitHub-Pages" class="headerlink" title="部署到GitHub Pages"></a>部署到GitHub Pages</h2><p>首先修改<code>_config.yml</code>文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:user/user.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>然后安装相关插件</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure><p>最后进行部署</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo clean &amp;&amp; hexo g -d</span></span><br></pre></td></tr></table></figure><h2 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h2><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a> <a href="https://theme-next.iissnan.com" target="_blank" rel="noopener">NexT</a></p>]]></content>
     
     <summary type="html">
     
