@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-17T11:49:00.696Z</updated>
+  <updated>2019-10-17T11:17:54.166Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>L1-SVM和L2-SVM</title>
-    <link href="http://yoursite.com/2019/10/17/L1-SVM%E5%92%8CL2-SVM/"/>
-    <id>http://yoursite.com/2019/10/17/L1-SVM和L2-SVM/</id>
-    <published>2019-10-17T08:46:31.000Z</published>
-    <updated>2019-10-17T11:49:00.696Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="l1-svm">L1-SVM</h2><p>L1-SVM的形式为 <span class="math display">\[\begin{aligned}    \min_{w, \xi} \quad &amp;\frac{1}{2} \| w \|^2 + C \sum_{i=1}^n \xi_i \\    \text{s.t.} \quad             &amp;y_i (w^T x_i + b) \geq 1 - \xi_i, i = 1, \cdots, n \\                                  &amp;\xi_i \geq 0, i = 1, \cdots, n\end{aligned}\]</span> 是一个正则项为一次的SVM，由KKT条件可得其对偶形式为 <span class="math display">\[\begin{aligned}    \min_{\alpha} \quad &amp;\frac{1}{2} \sum_{i, j=1}^n \alpha_i \alpha_j y_i y_j x_i^T x_j - \sum_{i=1}^n \alpha_i\\    \text{s.t.} \quad        &amp;\sum_{i=1}^n \alpha_i y_i = 0, i = 1, \cdots, n \\                             &amp;0 \leq \alpha_i \leq C, i = 1, \cdots, n\end{aligned}\]</span></p><h2 id="l2-svm">L2-SVM</h2><p>L2-SVM的形式为 <span class="math display">\[\begin{aligned}    \min_{w, \xi} \quad &amp;\frac{1}{2} \| w \|^2 + \frac{C}{2} \sum_{i=1}^n \xi_i^2 \\    \text{s.t.} \quad             &amp;y_i (w^T x_i + b) \geq 1 - \xi_i, i = 1, \cdots, n\end{aligned}\]</span> 是一个正则项为二次的SVM，由KKT条件可得其对偶形式为 <span class="math display">\[\begin{aligned}    \min_{\alpha} \quad &amp;\frac{1}{2} \sum_{i, j=1}^n \alpha_i \alpha_j y_i y_j (x_i^T x_j + \delta_{ij}) - \sum_{i=1}^n \alpha_i\\    \text{s.t.} \quad        &amp;\sum_{i=1}^n \alpha_i y_i = 0, i = 1, \cdots, n \\                             &amp;\alpha_i \geq 0, i = 1, \cdots, n\end{aligned}\]</span></p><p>其中<span class="math inline">\(\delta_{ij}\)</span>是Kronecker delta函数。注意到L2-SVM对<span class="math inline">\(\xi\)</span>不能添加约束，否则无法写出合适的对偶模型</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;l1-svm&quot;&gt;L1-SVM&lt;/h2&gt;
-&lt;p&gt;L1-SVM的形式为 &lt;span class=&quot;math display&quot;&gt;\[
-\begin{aligned}
-    \min_{w, \xi} \quad &amp;amp;\frac{1}{2} \| w \|^2 +
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>快速配置ShadowSocks</title>
