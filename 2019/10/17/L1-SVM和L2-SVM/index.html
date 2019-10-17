@@ -267,9 +267,30 @@
     </script>
 </head>
 
-<h2 id="L1-SVM"><a href="#L1-SVM" class="headerlink" title="L1-SVM"></a>L1-SVM</h2><p>L1-SVM的形式为<br>$$<br>\begin{aligned}<br>    \min_{\bm{w}, \bm{\xi}} \quad &amp;\frac{1}{2} | \bm{w} |^2 + C \sum_{i=1}^n \xi_i \<br>    \text{s.t.} \quad             &amp;y_i (\bm{w}^T \bm{x}<em>i + b) \geq 1 - \xi_i, i = 1, \cdots, n \<br>                                  &amp;\xi_i \geq 0, i = 1, \cdots, n<br>\end{aligned}<br>$$<br>是一个正则项为一次的SVM，由KKT条件可得其对偶形式为<br>$$<br>\begin{aligned}<br>    \min</em>{\bm{\alpha}} \quad &amp;\frac{1}{2} \sum_{i, j=1}^n \alpha_i \alpha_j y_i y_j \bm{x}<em>i^T \bm{x}_j - \sum</em>{i=1}^n \alpha_i\<br>    \text{s.t.} \quad        &amp;\sum_{i=1}^n \alpha_i y_i = 0, i = 1, \cdots, n \<br>                             &amp;0 \leq \alpha_i \leq C, i = 1, \cdots, n<br>\end{aligned}<br>$$</p>
-<h2 id="L2-SVM"><a href="#L2-SVM" class="headerlink" title="L2-SVM"></a>L2-SVM</h2><p>L2-SVM的形式为<br>$$<br>\begin{aligned}<br>    \min_{\bm{w}, \bm{\xi}} \quad &amp;\frac{1}{2} | \bm{w} |^2 + \frac{C}{2} \sum_{i=1}^n \xi_i^2 \<br>    \text{s.t.} \quad             &amp;y_i (\bm{w}^T x_i + b) \geq 1 - \xi_i, i = 1, \cdots, n<br>\end{aligned}<br>$$<br>是一个正则项为二次的SVM，由KKT条件可得其对偶形式为<br>$$<br>\begin{aligned}<br>    \min_{\bm{\alpha}} \quad &amp;\frac{1}{2} \sum_{i, j=1}^n \alpha_i \alpha_j y_i y_j (\bm{x}<em>i^T \bm{x}_j + \delta</em>{ij}) - \sum_{i=1}^n \alpha_i\<br>    \text{s.t.} \quad        &amp;\sum_{i=1}^n \alpha_i y_i = 0, i = 1, \cdots, n \<br>                             &amp;\alpha_i \geq 0, i = 1, \cdots, n<br>\end{aligned}<br>$$</p>
-<p>其中$\delta_{ij}$是Kronecker delta函数。注意到L2-SVM对$\xi$不能添加约束，否则无法写出合适的对偶模型</p>
+<h2 id="L1-SVM"><a href="#L1-SVM" class="headerlink" title="L1-SVM"></a>L1-SVM</h2><p>L1-SVM的形式为</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    \min_{\bm{w}, \bm{\xi}} \quad &\frac{1}{2} \| \bm{w} \|^2 + C \sum_{i=1}^n \xi_i \\
+    \text{s.t.} \quad             &y_i (\bm{w}^T \bm{x}_i + b) \geq 1 - \xi_i, i = 1, \cdots, n \\
+                                  &\xi_i \geq 0, i = 1, \cdots, n
+\end{aligned}</script><p>是一个正则项为一次的SVM，由KKT条件可得其对偶形式为</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    \min_{\bm{\alpha}} \quad &\frac{1}{2} \sum_{i, j=1}^n \alpha_i \alpha_j y_i y_j \bm{x}_i^T \bm{x}_j - \sum_{i=1}^n \alpha_i\\
+    \text{s.t.} \quad        &\sum_{i=1}^n \alpha_i y_i = 0, i = 1, \cdots, n \\
+                             &0 \leq \alpha_i \leq C, i = 1, \cdots, n
+\end{aligned}</script><h2 id="L2-SVM"><a href="#L2-SVM" class="headerlink" title="L2-SVM"></a>L2-SVM</h2><p>L2-SVM的形式为</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    \min_{\bm{w}, \bm{\xi}} \quad &\frac{1}{2} \| \bm{w} \|^2 + \frac{C}{2} \sum_{i=1}^n \xi_i^2 \\
+    \text{s.t.} \quad             &y_i (\bm{w}^T x_i + b) \geq 1 - \xi_i, i = 1, \cdots, n
+\end{aligned}</script><p>是一个正则项为二次的SVM，由KKT条件可得其对偶形式为</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+    \min_{\bm{\alpha}} \quad &\frac{1}{2} \sum_{i, j=1}^n \alpha_i \alpha_j y_i y_j (\bm{x}_i^T \bm{x}_j + \delta_{ij}) - \sum_{i=1}^n \alpha_i\\
+    \text{s.t.} \quad        &\sum_{i=1}^n \alpha_i y_i = 0, i = 1, \cdots, n \\
+                             &\alpha_i \geq 0, i = 1, \cdots, n
+\end{aligned}</script><p>其中$\delta_{ij}$是Kronecker delta函数。注意到L2-SVM对$\xi$不能添加约束，否则无法写出合适的对偶模型</p>
 
     </div>
 

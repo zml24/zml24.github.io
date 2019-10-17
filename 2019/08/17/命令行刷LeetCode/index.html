@@ -55,17 +55,17 @@
   };
 </script>
 
-  <meta name="description" content="获取leetcode-cli首先需要安装Node.js，在macOS可以使用brew进行安装 1$ brew install node  然后安装leetcode-cli 1$ npm install -g leetcode-cli  配置自动化提交脚本假设你的刷题目录为~/leetcode/dir，你的提交目录为~/git/dir，则每次只刷一道题，利用tab键自动补全可以方便的每次只刷一道题并">
+  <meta name="description" content="获取leetcode-cli首先需要安装Node.js，在macOS可以使用brew进行安装1$ brew install node 然后安装leetcode-cli1$ npm install -g leetcode-cli 配置自动化提交脚本假设你的刷题目录为~/leetcode/dir，你的提交目录为~/git/dir，则每次只刷一道题，利用tab键自动补全可以方便的每次只刷一道题并自动化提">
 <meta property="og:type" content="article">
 <meta property="og:title" content="命令行刷LeetCode">
 <meta property="og:url" content="http://yoursite.com/2019/08/17/命令行刷LeetCode/index.html">
 <meta property="og:site_name" content="AGI sea">
-<meta property="og:description" content="获取leetcode-cli首先需要安装Node.js，在macOS可以使用brew进行安装 1$ brew install node  然后安装leetcode-cli 1$ npm install -g leetcode-cli  配置自动化提交脚本假设你的刷题目录为~/leetcode/dir，你的提交目录为~/git/dir，则每次只刷一道题，利用tab键自动补全可以方便的每次只刷一道题并">
+<meta property="og:description" content="获取leetcode-cli首先需要安装Node.js，在macOS可以使用brew进行安装1$ brew install node 然后安装leetcode-cli1$ npm install -g leetcode-cli 配置自动化提交脚本假设你的刷题目录为~/leetcode/dir，你的提交目录为~/git/dir，则每次只刷一道题，利用tab键自动补全可以方便的每次只刷一道题并自动化提">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-08-17T07:39:33.080Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="命令行刷LeetCode">
-<meta name="twitter:description" content="获取leetcode-cli首先需要安装Node.js，在macOS可以使用brew进行安装 1$ brew install node  然后安装leetcode-cli 1$ npm install -g leetcode-cli  配置自动化提交脚本假设你的刷题目录为~/leetcode/dir，你的提交目录为~/git/dir，则每次只刷一道题，利用tab键自动补全可以方便的每次只刷一道题并">
+<meta name="twitter:description" content="获取leetcode-cli首先需要安装Node.js，在macOS可以使用brew进行安装1$ brew install node 然后安装leetcode-cli1$ npm install -g leetcode-cli 配置自动化提交脚本假设你的刷题目录为~/leetcode/dir，你的提交目录为~/git/dir，则每次只刷一道题，利用tab键自动补全可以方便的每次只刷一道题并自动化提">
   <link rel="canonical" href="http://yoursite.com/2019/08/17/命令行刷LeetCode/">
 
 
@@ -255,21 +255,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="获取leetcode-cli"><a href="#获取leetcode-cli" class="headerlink" title="获取leetcode-cli"></a>获取leetcode-cli</h2><p>首先需要安装<code>Node.js</code>，在macOS可以使用<code>brew</code>进行安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install node</span><br></pre></td></tr></table></figure>
-
-<p>然后安装<code>leetcode-cli</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install -g leetcode-cli</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置自动化提交脚本"><a href="#配置自动化提交脚本" class="headerlink" title="配置自动化提交脚本"></a>配置自动化提交脚本</h2><p>假设你的刷题目录为<code>~/leetcode/dir</code>，你的提交目录为<code>~/git/dir</code>，则每次只刷一道题，利用tab键自动补全可以方便的每次只刷一道题并自动化提交到Github<br>首先创建一个<code>sub.sh</code>文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> touch sub.sh</span><br></pre></td></tr></table></figure>
-
-<p>然后修改该文件（我用的是zsh）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> !/bin/zsh</span><br><span class="line">mv $1 ~/git/dir</span><br><span class="line">cd ~/git/dir</span><br><span class="line">git add $1</span><br><span class="line">cd -</span><br></pre></td></tr></table></figure>
-
-<p>这样就可以方便的一键提交了</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ./sub.sh 1.two-sum.cpp</span><br></pre></td></tr></table></figure>
-
+        <h2 id="获取leetcode-cli"><a href="#获取leetcode-cli" class="headerlink" title="获取leetcode-cli"></a>获取leetcode-cli</h2><p>首先需要安装<code>Node.js</code>，在macOS可以使用<code>brew</code>进行安装<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install node</span><br></pre></td></tr></table></figure></p>
+<p>然后安装<code>leetcode-cli</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install -g leetcode-cli</span><br></pre></td></tr></table></figure></p>
+<h2 id="配置自动化提交脚本"><a href="#配置自动化提交脚本" class="headerlink" title="配置自动化提交脚本"></a>配置自动化提交脚本</h2><p>假设你的刷题目录为<code>~/leetcode/dir</code>，你的提交目录为<code>~/git/dir</code>，则每次只刷一道题，利用tab键自动补全可以方便的每次只刷一道题并自动化提交到Github<br>首先创建一个<code>sub.sh</code>文件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> touch sub.sh</span><br></pre></td></tr></table></figure></p>
+<p>然后修改该文件（我用的是zsh）<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> !/bin/zsh</span><br><span class="line">mv $1 ~/git/dir</span><br><span class="line">cd ~/git/dir</span><br><span class="line">git add $1</span><br><span class="line">cd -</span><br></pre></td></tr></table></figure></p>
+<p>这样就可以方便的一键提交了<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ./sub.sh 1.two-sum.cpp</span><br></pre></td></tr></table></figure></p>
 <h2 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h2><p><a href="https://skygragon.github.io/leetcode-cli/commands" target="_blank" rel="noopener">leetcode-cli</a></p>
 
     </div>
